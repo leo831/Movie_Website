@@ -1,0 +1,161 @@
+body {
+ font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+#wrapper{
+	width:980px;
+	margin: 0 auto;
+}
+
+.item {
+	background: #fff;
+	border:solid 1px #f3f3f3;
+	padding: 10px;
+    margin-right: 10px;
+  	width: 212px;
+
+  float: left;
+  margin-top: 13px;
+}
+.item img{
+	max-width:100%;
+}
+ul li{
+  float: left;
+  list-style-type: none;
+}
+a {
+  float: right;
+  text-decoration: none;
+  color: black;
+
+}
+
+.menu {
+  background: darkcyan;
+  height:50px;
+
+}
+.menu ul {
+  height: 47px;
+  margin-top: 0px;
+  padding: 0px;
+  float: left;
+}
+.menu ul.right {
+	float:right;
+}
+.menu ul li {
+	list-style:none;
+	float:left;
+}
+.menu ul li a{
+	line-height:50px;
+	background:lightseagreen;
+	padding:0px 10px;
+	color:#fff;
+	border-left:solid 1px darkcyan;
+}
+.log {
+  float: right;
+  color: #FFF;
+    }
+    input[type="text"] {
+  padding: 5px;
+  width: 160px;
+}
+input[type="password"] {
+  padding: 5px;
+  width: 160px;
+}
+.search {
+  padding-top: 11px;
+  margin-right: 20px;
+}
+table {
+  margin-top: 20px;
+    border-collapse: collapse;
+}
+table td {
+  padding: 5px;
+  text-align: center;
+}
+table {
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+table th {
+  background: #20B2AA;
+  /* border-collapse: collapse; */
+  padding: 10px;
+}
+.movie {
+  /* background: #ccc; */
+  padding: 10px; 
+  padding-left:0px;
+  font-size: 20px;
+}
+span {
+  font-weight: bold;
+}
+.box {
+    width: 300px;
+    background: #fff;
+    padding: 10px;
+      margin-top: 20px;
+}
+.btn {
+  padding: 5px;
+  float: left;
+  border-radius: 2px;
+  background: #20B2AA;
+  color:#fff;
+  margin-top:5px;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,.5);
+}
+.src {
+  float: right;
+  margin-right: 50px;
+  margin-top: 11px;
+}
+.button,#submit {
+  background: lightseagreen;
+  padding: 7px;
+  border: none;
+  color: #fff;
+  border-radius: 2px;
+}
+section #search{
+  width: 400px;
+  padding: 10px;
+}
+section #submit{
+  padding: 10px;
+  width: 100px;
+}
+h1{
+  text-align: center;
+}
+#loginForm form{
+  text-align: center;
+  background: #eceeef;
+  width: 500px;
+  margin: 0px auto;
+  padding: 20px;
+}
+#wrapper table{
+  text-align: center;
+  margin-top: 20px;
+  margin: 0px auto;
+}
+#wrapper .tableinfo{
+  margin-top: 20px;
+}
+#movieForm{
+  margin-top: 20px;
+  text-align: center;
+}
