@@ -12,7 +12,7 @@ session_start();
        Remove this if you use the .htaccess -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>login</title>
+  <title>Main Page</title>
   <meta name="description" content="">
   <meta name="author" content="piita">
 
@@ -52,13 +52,11 @@ session_start();
         }
        ?>
        <?php }?>
-
           <?php if(!empty($_SESSION['username']))  {?>
             <li><a href="logout.php" class="navbar-brand">Logout</a></li>    
             <li><a href="movieOption.php" class="navbar-brand">User Section</a></li>   
             <?php if(!empty($_SESSION['admin'])) {?>
             <li><a href="admin.php" class="navbar-brand">Admin</a></li>
-
             
             <?php }?>
           <?php }?>
