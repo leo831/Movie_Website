@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (empty($_SESSION['username'])) {
+    header('Location: index.php');
+    exit;
+}
  require '../dbConnection.php';
  function getPost(){
      
