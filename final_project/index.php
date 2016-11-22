@@ -37,38 +37,37 @@
 <script src="js/bootstrap.min.js"></script>
 
 <script>
-	 	 function getInfo(){
-  	      $.ajax({
-            
-            url: "retrive.php",
-            type: "GET",
-            dataType: "json",
-          
-                success: function(data) {
-                	//alert("helo");
-                   $.each(data, function(i, item){
-                        	
-                        var tittle = item.tittle;
-                        var Id = item.Id;
-                        var rating = item.rating;
-                        var director = item.director;
-                        var year = item.year;
-                        var category = item.category;
-						var description = item.description;
-						if(item.image.length!=0) {
-							var img = $("<img>").attr("src","img/posters/"+item.image);
-						}
-						var post_id = $("<a class='btn'>").attr("href", "description.php?post="+Id).append("More Details")
-            var post = $("<div class='card'>").append(img).append("<strong>Title:</strong> "+tittle+"<br>", "<strong>Director:</strong> "+director+"<br>","<strong>Year:</strong> "+ year+"<br>","<strong>Rating:</strong> "+ rating+"<br>","<strong>Category:</strong> "+ category+"<br>").append(post_id);
-                		   $(".row").append(post);
-                		 
-                        }); 
-                 },                
-                error: function (data){
-              		 	alert("fail");
-              		 }    
-              		 });                
-         }
+function getInfo() {
+    $.ajax({
+        url: "retrive.php",
+        type: "GET",
+        dataType: "json",
+        success: function(data) {
+            $.each(data, function(i, item) {
+                var Id = item.Id;
+                var rating = item.rating;
+                var director = item.director;
+                var year = item.year;
+                var category = item.category;
+                var description = $("<p class='card-text'>").append(item.description);
+                if (item.image.length != 0) {
+                    var image = $("<img class='card-img-top'>").attr("src", "img/posters/" + item.image);
+                }
+                var post_id = $("<a class='btn btn-outline-success'>").attr("href", "description.php?post=" + Id).append("More Details");
+                var tittle =$("<h4 class='card-title'>").append(item.tittle);
+                var card=$("<div class='card-block'>").append(tittle,description,post_id);
+                var item=$("<div class='card'>").append(image,card);
+             
+               // var post = $("<div class='card'>").append(img).append("<strong>Title:</strong> " + tittle + "<br>", "<strong>Director:</strong> " + director + "<br>", "<strong>Year:</strong> " + year + "<br>", "<strong>Rating:</strong> " + rating + "<br>", "<strong>Category:</strong> " + category + "<br>").append(post_id);
+                $(".row").append(item);
+
+            });
+        },
+        error: function(data) {
+            alert("fail");
+        }
+    });
+}
   
   getInfo();
   
